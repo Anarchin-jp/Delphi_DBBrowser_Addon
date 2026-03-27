@@ -1,0 +1,51 @@
+﻿package DBBrowserPackage;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESIGNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  designide,
+  dbrtl,
+  vclFireDAC,
+  FireDAC,
+  FireDACMSSQLDriver,
+  FireDACMySQLDriver,
+  FireDACCommonDriver,
+  FireDACCommon,
+  vcldb,
+  FireDACSqliteDriver;
+
+contains
+  DBBrowser_Reg in 'DBBrowser_Reg.pas',
+  DBBrowser_View in 'DBBrowser_View.pas',
+  DBBrowser_Frame in 'DBBrowser_Frame.pas' {DBBrowserFrame: TFrame},
+  DBBrowser_ConnectForm in 'DBBrowser_ConnectForm.pas' {frmDBConnect};
+
+end.
